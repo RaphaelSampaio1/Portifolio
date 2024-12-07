@@ -1,0 +1,280 @@
+/* Estilos base permanecem iguais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; 
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    size: 50px;
+    background-color: #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    padding: 10px 0;
+}
+
+.navbar li {
+    margin: 5px 0; /* Espaçamento vertical para dispositivos menores */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens ocupem várias linhas */
+    justify-content: center; /* Centraliza os itens */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #00d9ff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #009db3;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.text-section {
+    width: 60%;
+    text-align: left;
+}
+
+.header h1 {
+    color: #00d9ff;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    color: #00d9ff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.btn {
+    background-color: #00d9ff;
+    color: #1f1f1f;
+    font-size: 20px;
+    box-shadow: 8px 10px 18px #31484d;
+    padding: 15px 40px;
+    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #009db3;
+    transform: scale(1.05);
+}
+
+.image-section {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; /* Garante alinhamento ao topo */
+}
+
+.profile-pic {
+    width: 100%; /* Permite que a largura seja ajustada conforme o container */
+    max-width: 400px; /* Define um tamanho máximo */
+    height: auto; /* Mantém a proporção da imagem */
+    float: none; /* Remove o float para evitar conflitos */
+    margin: 0; /* Remove margens desnecessárias */
+    border-radius: 50%; /* Torna a imagem circular */
+    border: 5px solid #00d9ff;
+}
+
+/* Estilo da seção de habilidades */
+.skills-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.skills-section h2 {
+    font-size: 2.5em;
+    color: #00d9ff;
+    margin-bottom: 30px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-item {
+    text-align: center;
+    width: 120px;
+}
+
+.skill-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.strong_title{
+    color: #00d9ffcb;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.projects-table th, .projects-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.projects-table th {
+    background-color: #fffdfd27;
+    font-weight: bold;
+}
+
+.projects-table tr:nth-child(even) {
+    background-color: #fffdfd04;
+}
+
+.projects-table tr:hover {
+    background-color:#00d9ffcb;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section, .image-section {
+        width: 100%;
+    }
+
+    .profile-pic {
+        margin: 20px auto; /* Adiciona margem para centralizar verticalmente */
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 30px;
+        margin: 10px;
+    }
+
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3b3939c7;
+    color: #d3cdcd;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    cursor:pointer;
+    transition: transform 0.3s;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}

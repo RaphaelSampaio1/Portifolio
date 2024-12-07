@@ -1,0 +1,121 @@
+body {
+    background-color: #1f1f1f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Garante que o conteúdo ocupe a altura total da tela */
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 20px; /* Adiciona espaçamento interno para dispositivos menores */
+}
+
+h1 {
+    font-size: 4em;
+    color: #d6d6d6;
+    margin-bottom: 40px;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; /* Ajuste para espaçamento uniforme entre botões */
+    width: 80%; /* Reduz a largura em telas menores */
+    margin: 0 auto; /* Centraliza o grid na tela */
+}
+
+.btn {
+    background-color: #00d9ff;
+    color: #1f1f1f;
+    padding: 50px 40px; 
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em; /* Tamanho do texto ajustado */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #007c9e;
+    box-shadow: 0px 0px 20px #00d9ff;
+}
+
+/* BTN Voltar Página */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3em; /* Reduz o tamanho do título */
+    }
+
+    .buttons-container {
+        grid-template-columns: 1fr 1fr; /* Mantém dois botões por linha */
+        width: 90%;
+        gap: 40px; /* Reduz o espaçamento em tablets */
+    }
+
+    .btn {
+        font-size: 1.2em; /* Reduz o tamanho do texto */
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Reduz ainda mais o título em telas menores */
+    }
+
+    .buttons-container {
+        grid-template-columns: 1fr; /* Torna os botões empilhados */
+        width: 100%;
+        gap: 30px;
+    }
+
+    .btn {
+        font-size: 1em; /* Ajusta o tamanho do texto */
+        padding: 12px 25px; /* Reduz o tamanho do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

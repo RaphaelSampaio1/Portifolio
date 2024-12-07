@@ -1,0 +1,138 @@
+body {
+    background-color: #1f1f1f;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title h1 {
+    font-size: 3.5em;
+    color: #1f1f1f;
+    background-color: #00d9ff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas padrão */
+    gap: 40px; /* Espaçamento entre os vídeos */
+    margin-top: 40px;
+}
+
+.video-item {
+    background-color: #e2e5e7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.video-item img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.description {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1f1f1f;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BTN Voltar Página */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Media Queries para Responsividade */
+
+/* Para tablets (até 1024px) */
+@media (max-width: 1024px) {
+    .title h1 {
+        font-size: 3em; /* Reduz tamanho do título */
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr 1fr; /* Mantém duas colunas */
+        gap: 30px; /* Reduz o espaçamento */
+    }
+
+    .video-item {
+        padding: 15px; /* Menos padding nos vídeos */
+    }
+
+    .description {
+        font-size: 20px; /* Ajusta tamanho do texto */
+    }
+}
+
+/* Para celulares (até 768px) */
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 2.5em; /* Reduz ainda mais o título */
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        gap: 20px; /* Ajusta espaçamento entre vídeos */
+    }
+
+    .video-item {
+        padding: 10px; /* Padding reduzido */
+    }
+
+    .description {
+        font-size: 18px; /* Ajusta o tamanho do texto */
+    }
+
+    .back-button {
+        font-size: 14px; /* Reduz tamanho do botão de voltar */
+        padding: 8px 15px;
+    }
+}
+
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 2em;
+        padding: 15px;
+    }
+
+    .description {
+        font-size: 16px; /* Texto menor em dispositivos menores */
+    }
+
+    .back-button {
+        font-size: 12px; /* Botão de voltar menor */
+        padding: 6px 12px;
+    }
+}
